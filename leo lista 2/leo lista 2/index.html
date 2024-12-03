@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista 2 exercicio 2</title>
+</head>
+<body>
+    <script>
+        function processMatrix() {
+    // Coletar os valores da matriz
+    const matrix = [
+        [parseFloat(document.querySelector('#value00').value), parseFloat(document.querySelector('#value01').value), parseFloat(document.querySelector('#value02').value)],
+        [parseFloat(document.querySelector('#value10').value), parseFloat(document.querySelector('#value11').value), parseFloat(document.querySelector('#value12').value)],
+        [parseFloat(document.querySelector('#value20').value), parseFloat(document.querySelector('#value21').value), parseFloat(document.querySelector('#value22').value)],
+    ];
+
+    // Coletar o valor do multiplicador
+    const multiplier = parseFloat(document.querySelector('#multiplier').value);
+
+    // Exibir a matriz original
+    const originalMatrixElement = document.querySelector('#originalMatrix');
+    originalMatrixElement.textContent = matrix.map(row => row.join(' ')).join('\n');
+
+    // Multiplicar a matriz e criar uma nova matriz
+    const multipliedMatrix = matrix.map(row => row.map(value => value * multiplier));
+
+    // Exibir a matriz multiplicada
+    const multipliedMatrixElement = document.querySelector('#multipliedMatrix');
+    multipliedMatrixElement.textContent = multipliedMatrix.map(row => row.join(' ')).join('\n');
+}
+    </script>
+    
+</body>
+</html>
